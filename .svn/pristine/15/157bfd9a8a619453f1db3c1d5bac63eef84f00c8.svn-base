@@ -1,0 +1,51 @@
+#include "Barbarian.h"
+#include "Engine.h"
+#include "TileMap.h"
+#include <math.h>
+// Barbarian initalisation (all init code goes here)
+void cBarbarian::Init()
+{
+	m_mapData=ENGINE->GetTileMap()->getRawMap();// The map matrix 
+	sizeMapX=ENGINE->GetTileMap()->getSizeX();// the map size x
+	sizeMapY=ENGINE->GetTileMap()->getSizeY();// the map size y
+	
+	m_currentPosition=0;
+	// push some positions into the destination vector
+	// this vector should hold your solution 
+	//TO DO -> make algorithm that populates this vector with correct values
+	m_positionList.push_back(ENGINE->GetTileMap()->getSchnappyPos());
+
+	m_positionList.push_back(cVector3df(1*TILE_OFFSET,0,0));
+
+	m_positionList.push_back(cVector3df(0,0,1*TILE_OFFSET));
+
+	m_positionList.push_back(cVector3df(3*TILE_OFFSET,0,2*TILE_OFFSET));
+
+	m_positionList.push_back(cVector3df(1*TILE_OFFSET,0,2*TILE_OFFSET));
+
+}
+
+void cBarbarian::Update(float deltaTime)
+{
+	cBarbarianAditional::Update(deltaTime);
+	//move barbarian between the positions of the  solution vector
+	if( m_bInterpolate ==false)
+	{
+		m_currentPosition++;
+		m_currentPosition=m_currentPosition%m_positionList.size();
+		MoveTo(m_positionList[m_currentPosition]);
+	}
+}
+
+cBarbarian::cBarbarian()
+{
+	m_bInterpolate=false;
+	m_Type=BARBARIAN;
+	m_Health=3.0f;
+	m_Armor=1.0f;
+	m_Damage=1.0f;
+	m_Mana=1.0f;
+}
+cBarbarian::~cBarbarian()
+{
+}

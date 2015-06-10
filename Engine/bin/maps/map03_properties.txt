@@ -1,0 +1,10 @@
+Alina
+Health 12
+Mana	2
+Armor 	4
+Damage	10
+Schanppi 
+Health 5
+Mana	1
+Armor 	200
+Damage	5

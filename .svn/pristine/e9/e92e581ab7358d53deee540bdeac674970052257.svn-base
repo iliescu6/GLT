@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\Win32\esUtil_TGA.c" />
+    <ClCompile Include="Source\Win32\esUtil_win32.c" />
+    <ClCompile Include="Source\esShader.c" />
+    <ClCompile Include="Source\esShapes.c" />
+    <ClCompile Include="Source\esTransform.c" />
+    <ClCompile Include="Source\esUtil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\esUtil_win.h" />
+    <ClInclude Include="Include\esUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Win32">
+      <UniqueIdentifier>{9f63c958-a109-4a62-886e-07012b42a732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{db020b48-cb47-4525-aa4b-cd6c5be68315}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

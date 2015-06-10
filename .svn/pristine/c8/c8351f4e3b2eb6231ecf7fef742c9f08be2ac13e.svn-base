@@ -1,0 +1,9 @@
+models/cub.obj
+shaders/skybox
+<CUBE3D>
+textures/xNeg.tga
+textures/xPos.tga
+textures/yPos.tga
+textures/yNeg.tga
+textures/zNeg.tga
+textures/zPos.tga
