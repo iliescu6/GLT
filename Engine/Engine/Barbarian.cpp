@@ -17,7 +17,7 @@ void cBarbarian::Init()
 	    m_positionList.push_back(ENGINE->GetTileMap()->getSchnappyPos());
 		//m_positionList.push_back(cVector3df(4*TILE_OFFSET, 0, 0*TILE_OFFSET));
 		//ifstream f(filename);
-		ifstream f("map02.txt");
+		ifstream f("maps/map02.txt");
 		if (f.is_open())
 		{
 			f >> m_sizeX;
@@ -27,7 +27,7 @@ void cBarbarian::Init()
 				{
 					int val;
 					f >> val;
-					if (val== 1 | val==2 || val==3 || val==4){
+					if (val== 1 || val==2 || val==3 || val==4){
 						m_positionList.push_back(cVector3df(i*TILE_OFFSET, 0, j*TILE_OFFSET));
 					}
 				}
